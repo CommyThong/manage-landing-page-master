@@ -15,7 +15,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     font-family: 'be vietnam pro';
-    padding: 0 1.5% 0 1.5%;
+    /* padding: 0 .5% 0 .5%; */
 }
 
 .div-1 {
@@ -24,6 +24,7 @@ body {
     width: 100%;
     max-width: 90rem;
     height: 9rem;
+    padding: 0 1.5% 0 1.5%;
 }
 
 .div-1-container {
@@ -42,21 +43,45 @@ body {
 
 .div-1 ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
     align-items: center;
     list-style: none;
-    width: 30rem;
+    width: 100%;
+    max-width: 28rem;
+    height: 2rem;
+    padding-right: 0.7rem;
+}
+
+.div-1 ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.div-1 ul li:hover {
+    color: hsl(227, 12%, 61%);
 }
 
 .div-1 ul li {
     display: flex;
-    /* min-width: max-content; */
-    flex-wrap: nowrap;
-    min-width: fit-content;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: max-content;
+    height: 100%;
     font-size: 0.8em;
     font-weight: 500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.081);
     color: hsl(228, 39%, 23%);
+}
+
+.get-start-anchor {
+    text-decoration: none;
+    display: flex;
+    min-width: fit-content;
 }
 
 .get-start {
@@ -74,6 +99,10 @@ body {
     box-shadow: 0px 10px 10px hsla(12, 88%, 59%, 0.305);
 }
 
+.get-start:hover {
+    background-color: hsla(12, 88%, 59%, 0.6);
+}
+
 .div-2 {
     display: flex;
     justify-content: center;
@@ -81,6 +110,7 @@ body {
     min-height: 40rem;
     width: 100%;
     max-width: 90rem;
+    padding: 0 1.5% 0 1.5%;
 }
 
 .div-2-card-1 {
@@ -122,6 +152,8 @@ body {
     height: 37rem;
     width: 100%;
     max-width: 90rem;
+    gap: 1rem;
+    padding: 0 1.5% 0 1.5%;
 }
 
 .div-3-card-1 {
@@ -257,13 +289,21 @@ body {
 
 .div-5 {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 13.8rem;
+    justify-content: center;
     width: 100%;
     max-width: 90rem;
-    gap: 3rem;
+    height: 13.8rem;
     background-color: hsl(12, 88%, 59%);
+    padding: 0 1.5% 0 1.5%;
+}
+
+.div-5-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+    height: 100%;
 }
 
 .simplify {
@@ -290,99 +330,145 @@ body {
 
 .div-6 {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 15.5rem;
     width: 100%;
     max-width: 90rem;
     background-color: hsl(233, 12%, 13%);
+    padding: 0 1.5% 0 1.5%;
+}
+
+.div-6-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     color: white;
     font-size: 0.84em;
     font-weight: 100;
+    height: 100%;
+    width: 100%;
+    max-width: 70rem;
+}
+
+.div-6-card-1 {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    /* max-width: 7.5rem; */
+    height: 100%;
 }
 
 .manage-3 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 31%;
-    min-height: 50%;
+    width: 100%;
+    height: 7rem;
+    align-items: flex-end;
+    align-self: flex-end;
 }
 
 .social-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 31%;
-    min-height: 50%;
-    gap: 0.7rem;
+    width: 100%;
+    max-width: 11rem;
+    height: 100%;
+}
+
+.social-container li:hover {
+    background-color: aqua;
+}
+
+.social-container a {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
 }
 
 .contact-list {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 40%;
-    min-height: 100%;
+    height: 100%;
+    width: 35%;
+    /* max-width: 28rem; */
 }
 
 .contact-list ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-content: space-between;
+    list-style: none;
     height: 9rem;
     width: 100%;
-    list-style: none;
+    max-width: 24rem;
+}
+
+.contact-list a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 25%;
+    text-decoration: none;
 }
 
 .contact-list li {
-    min-height: 25%;
     font-size: 1.02em;
-    /* text-shadow: 1px 1px 10px rgb(255, 255, 255); */
     color: rgba(255, 255, 255, 0.828);
+    width: fit-content;
+    height: max-content;
+}
+
+.contact-list li:hover {
+    color: hsl(12, 88%, 59%);
 }
 
 .search-container {
-    /* height: 3rem; */
-    width: 29%;
-    height: 2.8rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3rem;
+    width: 16.2rem;
+    height: 10rem;
+    align-self: flex-end;
+    align-content: center;
+    /* max-width: 23.3rem; */
 }
 
 .copyright {
     /* height: 3rem; */
-    width: 21%;
-    height: 5rem;
+    width: fit-content;
+    max-width: 14rem;
     display: flex;
-    align-items: last baseline;
+    align-items: center;
+    align-self: flex-end;
     font-size: 0.9em;
     color: hsla(227, 5%, 65%, 0.815);
 }
 
 .updates {
     display: flex;
-    flex-wrap: nowrap;
-    padding: 1.1em 3.2em 1.1em 1.4em;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex-wrap: nowrap; */
+    /* padding: 1.1em 3.2em 1.1em 1.4em; */
     border-radius: 40px;
     background-color: white;
     color: hsl(227, 12%, 61%);
     font-size: 0.9em;
-    height: 2.8rem;
-    width: 13rem;
+    height: 3rem;
+    width: 100%;
+    max-width: 12rem;
+    padding-left: 1em;
 }
 
 .updates-go {
-    padding: 1.6em 2.2em 0 2.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1.6em 2.2em 0 2.2em; */
     border-radius: 40px;
     background-color: hsl(12, 88%, 59%);
     font-size: 0.8em;
-    height: 2.8rem;
+    height: 3rem;
+    width: 4rem;
 }
 
 .attribution {

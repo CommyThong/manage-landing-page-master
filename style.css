@@ -5,7 +5,15 @@
     padding: 0;
     margin: 0;
     -webkit-tap-highlight-color: transparent;
-    /* border: 1px solid black; */
+    border: 1px solid black;
+}
+
+a:active {
+    opacity: 0;
+}
+
+.attribution a:visited {
+    color: none;
 }
 
 body {
@@ -64,7 +72,25 @@ body {
 
 .img-container {
     display: flex;
+    min-width: fit-content;
+}
+
+.img-anchor {
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.img-anchor img {
+    width: 100%;
+}
+
+.img-anchor img:hover {
+    opacity: 0.6;
+}
+
+.hamburger-div {
+    display: none;
 }
 
 .div-1 ul {
@@ -74,6 +100,7 @@ body {
     list-style: none;
     width: 100%;
     max-width: 28rem;
+    min-width: 21rem;
     height: 2rem;
     padding-right: 0.7rem;
 }
@@ -447,8 +474,29 @@ body {
     padding-right: 25px;
 }
 
+.manage-3 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+}
+
 .manage-3 img {
     width: 100%;
+    height: min-content;
+}
+
+.manage-3 img:hover {
+    opacity: 0.8;
+    filter:
+    brightness(1000%) grayscale(100%) /* To change the image color to the white */
+    opacity(0.1) /* To apply the color all over the image */
+    drop-shadow(0 0 0 hsl(12, 88%, 59%)) /* To apply my costum color */
+    drop-shadow(0 0 0 hsl(12, 88%, 59%)) /* To apply my costum color more stronger */
+    drop-shadow(0 0 0 hsl(12, 88%, 59%))
+    drop-shadow(0 0 0 hsl(12, 88%, 59%))
+    drop-shadow(0 0 0 hsl(12, 88%, 59%))
 }
 
 .social-container {
@@ -471,7 +519,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.9rem;
+    width: 2rem;
     list-style-type: none;
 }
 
@@ -589,10 +637,210 @@ body {
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
 }
     
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: black;
+}
+
+.attribution a:hover {
+    color: hsl(12, 70%, 46%);
+}
+
+.attribution a:active {
+    color: black;
+}
+
+@media (max-width: 660px) {
+    body {
+        /* background-color: red; */
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-1 {
+        height: 6rem;
+    }
+
+    .div-1-container, .div-2-container, .div-3, .div-3-container, .div-4, .div-5-container, .div-6-container {
+        width: 90%;
+    }
+    
+    .div-1-container {
+        display: flex;
+        height: 100%;
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+    }
+    
+    .img-anchor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0%;
+        width: 7.3rem;
+        height: 100%;
+    }
+
+    .hamburger-div {
+        display: contents;
+    }
+
+    .div-1 ul {
+        display: none;
+    }
+
+    .div-2 {
+        display: flex;
+        justify-content: center;
+        min-height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .div-2-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .div-2-card-1 {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        justify-content: center;
+        gap: 0rem;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .div-2-card-2 {
+        display: flex;
+    }
+    
+    .div-2-card-2 img {
+        width: 100%;
+    }
+    
+    .bring {
+        font-size: 2.5em;
+        letter-spacing: -0.05em;
+        line-height: 1.2;
+        font-weight: 600;
+        color: hsl(228, 39%, 23%);
+    }
+    .manage {
+        font-size: 1em;
+        max-width: 100%;
+        line-height: 1.6;
+        color: hsl(227, 12%, 61%);
+    }
+
+    .div-3 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .div-3-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .div-3-card-1 {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        padding-right: 0rem;
+    }
+    
+    .div-3-card-1-container {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        gap: 0rem;
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .div-3-card-2 {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        justify-content: space-evenly;
+        align-items: center;
+        /* gap: 1.4rem; */
+        width: 100%;
+        height: 100%;
+        /* padding: 20px 0 20px 0; */
+    }
+    
+    .whats {
+        font-size: 2.5em;
+        font-weight: 600;
+        width: 100%;
+        align-self: flex-end;
+        color: hsl(228, 39%, 23%);
+        line-height: 1.1;
+        /* margin-right: -8rem; */
+        padding-top: 0rem;
+    }
+    
+    .manage-2 {
+        font-size: 1em;
+        max-width: 100%;
+        color: hsl(227, 12%, 61%);
+        line-height: 1.6;
+    }
+    
+    .div-3-numbers {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        min-width: min-content;
+        /* margin-left: -10rem; */
+        /* justify-content: space-around; */
+        font-weight: 700;
+        gap: 0;
+        font-size: 1em;
+        letter-spacing: -0.05em;
+        color: hsl(228, 39%, 23%);
+    }
+    
+    .div-3-numbers-buttons {
+        padding: 0.6em 1.5em 0.6em 1.5em;
+        border-radius: 30px;
+        width: fit-content;
+        background-color: hsl(12, 88%, 59%);
+        color: rgba(255, 255, 255, 0.935);
+        /* margin-left: 15px; */
+    }
+    
+    .div-3-card-2-paragraph {
+        max-width: 28rem;
+        align-self: flex-end;
+        /* align-self: center; */
+        font-size: 1em;
+        font-weight: 100;
+        color: hsl(227, 12%, 61%);
+        line-height: 1.6;
+    }
 }
